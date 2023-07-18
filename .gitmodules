@@ -7,3 +7,6 @@
 [submodule "ros2_wheeltec_n100_imu"]
 	path = ros2_wheeltec_n100_imu
 	url = https://github.com/NDHANA94/ros2_wheeltec_n100_imu.git
+[submodule "serial-ros2"]
+	path = serial-ros2
+	url = https://github.com/RoverRobotics-forks/serial-ros2.git
