@@ -1,0 +1,3 @@
+[submodule "ATGM336H_NMEA_ROS2"]
+	path = ATGM336H_NMEA_ROS2
+	url = https://github.com/NDHANA94/ATGM336H_NMEA_ROS2.git
