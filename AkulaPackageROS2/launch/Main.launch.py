@@ -4,7 +4,7 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch.substitutions import Command
-
+import launch_ros.actions
 import launch
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -13,8 +13,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
-# from launch.actions import ExecuteProcess
-import launch_ros.actions
+
 
 def generate_launch_description():
     return LaunchDescription([
@@ -38,7 +37,8 @@ def generate_launch_description():
                 'robot_description': Command([
                     'xacro',
                     ' ',
-                   get_package_share_directory('AkulaPackage') + '/model/akula.urdf'
+                    get_package_share_directory(
+                        'akula_package') + '/model/akula.urdf'
                 ])
             }]
         ),
@@ -49,28 +49,29 @@ def generate_launch_description():
             name='imu_node'
         ),
 
-        launch.actions.ExecuteProcess( 
-         cmd=['ros2', 'run', 'atgm336h5n3x', 'nmea_node', '--dev', '/dev/ttyUSB0'], 
-         output='screen'),
+        launch.actions.ExecuteProcess(
+            cmd=['ros2', 'run', 'atgm336h5n3x',
+                 'nmea_node', '--dev', '/dev/ttyUSB0'],
+            output='screen'),
 
-        launch.actions.ExecuteProcess( 
-         cmd=['ros2', 'launch', 'localization', 'loc.launch.py'], 
-         output='screen'),
-
+        launch.actions.ExecuteProcess(
+            cmd=['ros2', 'launch', 'localization', 'loc.launch.py'],
+            output='screen'),
 
         Node(
-            package='BaslerROS2',
-            executable='BaslerNode',
-            name='Basler'
-        ),
+             package='BaslerROS2',
+             executable='BaslerNode',
+             name='Basler'
+         ),
         Node(
             package='akula_package',
             executable='AkulaEncoderNode',
             name='AkulaEncoders'
-        ),
-        #Node(
+        )
+        # Node(
         #    package='AkulaPackage',
         #    executable='AkulaImuNode',
         #    name='AkulaIMU'
-        #)
+        # )
     ])
+
