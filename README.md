@@ -4,15 +4,24 @@ All instructions to launch and run the Akula robot.
 (Please be aware the oreder of instructions in the steps does matter)
 
 ## Step 0
-Before doing anything else, turn on the robot with the power button behind the robot:
+Before doing anything else, open the hood of robot and turn on the red click from 0 to 1. Then turn on the robot with the power button behind the robot:
 
+<img src="images/photo1689680093.jpeg" width="150"/>
+<img src="images/photo1689770820.jpeg" width="150"/>
 <img src="images/photo1689693344.jpeg" width="150"/>
 
-Turn on the Intel NUC system. For that purpose open the head part of the robot to access the NUC hardware. 
+Wait few seconds till you hear the Velodyne lidar is spinning.
+
+<img src="images/photo1689770975.jpeg" width="150"/>
+
+Next, turn on the Intel NUC system. For that purpose open the head part of the robot to access the NUC hardware. Connect the batthery to NUC and it will be autimatically activated as the power button turns blue:
+
 
 <img src="images/photo1689680093.jpeg" width="150"/>
 <img src="images/photo1689680112.jpeg" width="150"/>
+<img src="images/photo1689771144.jpeg" width="150"/>
 <img src="images/photo1689680170.jpeg" width="150"/>
+
 
 Then NUC will initiate a network signal which you can find it in your wifi networks. Connect to it and the password is:  ``` mrob@148 ``` .
 
@@ -69,7 +78,7 @@ After installing the application please enter the ip 10.42.0.1 into request part
 
 <img src="images/photo1689683444.jpeg" width="200"/>
 
-After connect to control unit place robot in desired environment for recording and release the safety button and start riding the robot.
+After connect to control unit place robot in desired environment for recording and release the safety button and start driving the robot.
 
 <img src="images/photo1689680056.jpeg" width="200"/>
 
@@ -89,10 +98,32 @@ Or alternatively you can use Android application interface to record data:
 
 <img src="images/photo1689766197.jpeg" width="200"/>
 
-The recorded bags are save in this directory:
+The recorded bags are saved in this directory:
 
 ```
 /home/mrob/RosBags
 ```
 
+## Turn off
+
+For turning off the system, first push the safety button down.
+
+<img src="images/photo1689680056.jpeg" width="200"/>
+
+Then turn off the NUC system through ``` ssh ``` :
+
+```
+sudo shutdown now
+```
+
+In case of asking for password, as always it is : ``` mrob@148 ```
+
+After turning off the NUC, unplug the battery.(Pay attention keeping the battery plugged can cause to NUC turn on later on, and will decharge the battery and battery will die!)
+
+<img src="images/photo1689771144.jpeg" width="150"/>
+
+Then turn off the robot via the power button and turn of the red button to 0 : 
+
+<img src="images/photo1689693344.jpeg" width="150"/>
+<img src="images/photo1689770820.jpeg" width="150"/>
 
