@@ -61,6 +61,10 @@ Turn on the robot control system. At the first step download the Anroid app for 
 
 <img src="images/Screenshot from 2023-07-18 15-26-42.png" width="200"/>
 
+Connect your mobile network to NUC hotspot wifi and also don't forget to turn of your simcard data roaming.
+
+<img src="images/photo1689769930.jpeg" width="200"/>
+
 After installing the application please enter the ip 10.42.0.1 into request part and connect to controlling unit of the robot: 
 
 <img src="images/photo1689683444.jpeg" width="200"/>
