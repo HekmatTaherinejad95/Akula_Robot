@@ -81,5 +81,14 @@ For recording all the topics, open another terminal:
 source /opt/ros/$ROS_DISTRO/setup.bash
 ros2 bag record -a
 ```
+Or alternatively you can use Android application interface to record data: 
+
+<img src="images/photo1689766197.jpeg" width="200"/>
+
+The recorded bags are save in this directory:
+
+```
+/home/mrob/RosBags
+```
 
 
