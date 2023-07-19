@@ -3,6 +3,7 @@ All instructions to launch and run the Akula robot.
 
 ## Step 0
 Turn on the robot with the power button behind the robot:
+
 <img src="images/photo1689693344.jpeg" width="150"/>
 
 Turn on the Intel NUC system. For that purpose open the head part of the robot to access the NUC hardware. 
@@ -69,8 +70,13 @@ After connect to control unit place robot in desired environment for recording a
 ## Step 4
  In the next step these are the commands for launching the sensors and recording a rosbag for sensors data:
 
+ ```
+ ros2 launch akula_package Main.launch.py
+ ```
+For recording all the topics, open another terminal:
 
-
-
+```
+ros2 bag record -a
+```
 
 
