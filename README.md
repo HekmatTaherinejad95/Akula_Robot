@@ -1,8 +1,10 @@
 # Akula_Robot
 All instructions to launch and run the Akula robot. 
 
+(Please be aware the oreder of instructions in the steps does matter)
+
 ## Step 0
-Turn on the robot with the power button behind the robot:
+Before doing anything else, turn on the robot with the power button behind the robot:
 
 <img src="images/photo1689693344.jpeg" width="150"/>
 
@@ -59,7 +61,7 @@ Turn on the robot control system. At the first step download the Anroid app for 
 
 <img src="images/Screenshot from 2023-07-18 15-26-42.png" width="200"/>
 
-After installing the application please enter the ip into request part and connect to controlling unit of the robot: 
+After installing the application please enter the ip 10.42.0.1 into request part and connect to controlling unit of the robot: 
 
 <img src="images/photo1689683444.jpeg" width="200"/>
 
@@ -76,6 +78,7 @@ After connect to control unit place robot in desired environment for recording a
 For recording all the topics, open another terminal:
 
 ```
+source /opt/ros/$ROS_DISTRO/setup.bash
 ros2 bag record -a
 ```
 
